@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {GitUser} from '../../interfaces/git-hub';
 
 @Component({
@@ -6,13 +6,8 @@ import {GitUser} from '../../interfaces/git-hub';
   templateUrl: './profile-card.component.html',
   styleUrls: ['./profile-card.component.scss']
 })
-export class ProfileCardComponent implements OnInit {
+export class ProfileCardComponent {
   @Input() user: GitUser;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   getTwitterUrl(): string {
     return `https://twitter.com/${this.user.twitter_username}`;

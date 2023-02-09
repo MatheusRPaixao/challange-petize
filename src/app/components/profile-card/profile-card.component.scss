@@ -1,3 +1,26 @@
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: .7;
+}
+
+.no-borders {
+  border: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.btn {
+  color: white !important;
+}
+
 .avatar-img {
   width: 48px;
   height: 48px;

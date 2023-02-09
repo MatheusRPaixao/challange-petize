@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {GitRepos} from '../../interfaces/git-hub';
 
 @Component({
@@ -6,12 +6,6 @@ import {GitRepos} from '../../interfaces/git-hub';
   templateUrl: './repos-list.component.html',
   styleUrls: ['./repos-list.component.scss']
 })
-export class ReposListComponent implements OnInit {
+export class ReposListComponent {
   @Input() repositories: Array<GitRepos>;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

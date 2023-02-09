@@ -1,10 +1,12 @@
 <div class="input-group">
-        <span class="input-group-text">
-          <img src="assets/icons/zoom.png" alt="zoom"/>
-        </span>
+  <span class="input-group-text">
+    <img *ngIf="!readonly" src="assets/icons/zoom.png" alt="zoom"/>
+
+    <a href="/home" *ngIf="readonly">◄</a>
+  </span>
   <input type="text" class="form-control" [placeholder]="placeholder" [readonly]="readonly" [disabled]="readonly"
          [formControl]="searchControl"
-         (keydown.enter)="onEnterEvent.emit()">
+         (keydown.enter)="enterEvent.emit()">
   <div class="has-error" *ngIf="searchControl.hasError('notFound')">
     Esse usuário não foi encontrado, certifique-se de que o nome esta correto.
   </div>

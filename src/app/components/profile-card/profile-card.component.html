@@ -1,5 +1,5 @@
-<div class="card" style="width: 18rem;" *ngIf="user">
-  <div class="card-header">
+<div class="card no-borders mt-3" *ngIf="user">
+  <div class="card-header no-borders">
     <div class="row">
       <div class="col-auto">
         <img [src]="user.avatar_url" class="avatar-img" alt="Avatar">
@@ -7,7 +7,7 @@
       <div class="col">
         <div class="row">
           <div class="col-12 title">{{ user.name }}</div>
-          <div class="col-12">
+          <div class="col-12 subtitle">
             @{{ user.login }}
           </div>
         </div>

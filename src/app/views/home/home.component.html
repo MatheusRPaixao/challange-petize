@@ -6,7 +6,7 @@
   </div>
   <div class="row justify-content-around w-50">
     <div class="col text-center">
-      <app-search [searchControl]="searchControl" (onEnterEvent)="onSubmit()"></app-search>
+      <app-search [searchControl]="searchControl" (enterEvent)="onSubmit()"></app-search>
     </div>
     <div class="col-3">
       <button type="button" class="btn btn-primary" (click)="onSubmit()">Search</button>

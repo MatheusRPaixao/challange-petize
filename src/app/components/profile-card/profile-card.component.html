@@ -67,7 +67,7 @@
         <img src="/assets/icons/link.png" alt="link">
       </div>
       <div class="col">
-        <span>{{user.blog}}</span>
+        <a [href]="user.blog" target="_blank">{{ user.blog }}</a>
       </div>
     </div>
 
@@ -76,7 +76,7 @@
         <img src="/assets/icons/twitter.png" alt="twitter">
       </div>
       <div class="col">
-        <a class="twitter-url" [href]="getTwitterUrl()" target="_blank">@{{ user.twitter_username }}</a>
+        <a [href]="getTwitterUrl()" target="_blank">@{{ user.twitter_username }}</a>
       </div>
     </div>
 

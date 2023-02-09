@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
-import { PerfilComponent } from './views/perfil/perfil.component';
+import { ProfileComponent } from './views/profile/profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './components/search/search.component';
@@ -13,7 +13,7 @@ import { SearchComponent } from './components/search/search.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    PerfilComponent,
+    ProfileComponent,
     SearchComponent
   ],
   imports: [

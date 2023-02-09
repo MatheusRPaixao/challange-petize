@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div class="container-fluid home-container">
+  <div class="row">
+    <div class="col text-center">
+      <span class="title">Search d_evs</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <div class="input-group">
+        <span class="input-group-text">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </span>
+        <input type="text" class="form-control" placeholder="Search" [formControl]="searchControl">
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Search</button>
+      </div>
+    </div>
+  </div>
+</div>

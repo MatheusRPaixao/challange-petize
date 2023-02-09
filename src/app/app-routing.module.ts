@@ -9,7 +9,7 @@ export const DEFAULT_ROUTE = '/home';
 const routes: Routes = [
   {path: '', redirectTo: DEFAULT_ROUTE, pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil/:username', component: PerfilComponent},
 ];
 
 @NgModule({

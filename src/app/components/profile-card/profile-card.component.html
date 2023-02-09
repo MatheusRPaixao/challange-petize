@@ -1,0 +1,89 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-auto">
+        <img [src]="user.avatar_url" class="avatar-img" alt="Avatar">
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col-12 title">{{ user.name }}</div>
+          <div class="col-12">
+            @{{ user.login }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ user.bio }}</p>
+
+    <div class="row">
+      <div class="col-2">
+        <img src="/assets/icons/group.png" alt="group">
+      </div>
+      <div class="col">
+        <span>{{user.followers}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-2">
+        <img src="/assets/icons/hearth.png" alt="hearth">
+      </div>
+      <div class="col">
+        <span>{{user.following}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-1" *ngIf="user.company">
+      <div class="col-2">
+        <img src="/assets/icons/office.png" alt="office">
+      </div>
+      <div class="col">
+        <span>{{user.company}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-1" *ngIf="user.location">
+      <div class="col-2">
+        <img src="/assets/icons/pin.png" alt="pin">
+      </div>
+      <div class="col">
+        <span>{{user.location}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-1" *ngIf="user.email">
+      <div class="col-2">
+        <img src="/assets/icons/email.png" alt="email">
+      </div>
+      <div class="col">
+        <span>{{user.email}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-1" *ngIf="user.blog">
+      <div class="col-2">
+        <img src="/assets/icons/link.png" alt="link">
+      </div>
+      <div class="col">
+        <span>{{user.blog}}</span>
+      </div>
+    </div>
+
+    <div class="row mb-1" *ngIf="user.twitter_username">
+      <div class="col-2">
+        <img src="/assets/icons/twitter.png" alt="twitter">
+      </div>
+      <div class="col">
+        <a class="twitter-url" [href]="getTwitterUrl()" target="_blank">@{{ user.twitter_username }}</a>
+      </div>
+    </div>
+
+    <div class="row mt-4" *ngIf="user.email">
+      <div class="col">
+        <a type="button" class="btn btn-primary" href="mailto:{{user.email}}">Contato</a>
+      </div>
+    </div>
+  </div>
+</div>

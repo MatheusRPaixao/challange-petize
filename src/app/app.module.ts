@@ -8,13 +8,17 @@ import { ProfileComponent } from './views/profile/profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './components/search/search.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { ReposListComponent } from './components/repos-list/repos-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    SearchComponent
+    SearchComponent,
+    ProfileCardComponent,
+    ReposListComponent
   ],
   imports: [
     BrowserModule,

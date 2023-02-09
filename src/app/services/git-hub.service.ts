@@ -18,8 +18,8 @@ export class GitHubService {
     return this.http.get(url) as Observable<GitUser>;
   }
 
-  public getGitRepos(username: string): Observable<GitRepos> {
+  public getGitRepos(username: string): Observable<Array<GitRepos>> {
     const url = `${this.baseUrl}/${username}/repos`;
-    return this.http.get(url) as Observable<GitRepos>;
+    return this.http.get(url) as Observable<Array<GitRepos>>;
   }
 }

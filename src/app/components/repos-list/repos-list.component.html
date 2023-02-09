@@ -1,1 +1,7 @@
-<p>repos-list works!</p>
+<div class="container-fluid repos-container">
+  <div class="row" *ngFor="let repository of repositories">
+    <div class="col-12 my-3">
+      <app-repos-item [repository]="repository"></app-repos-item>
+    </div>
+  </div>
+</div>

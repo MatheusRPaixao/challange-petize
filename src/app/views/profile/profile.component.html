@@ -1,5 +1,5 @@
 <div class="container-fluid profile-container">
-  <div class="row align-items-center">
+  <div class="row align-items-center mb-5">
     <div class="col-3">
       <span class="search-devs">Search d_evs</span>
     </div>
@@ -8,13 +8,12 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-3">
-      <app-profile-card [user]="user" ></app-profile-card>
-
+      <app-profile-card [user]="user"></app-profile-card>
     </div>
-    <div class="col-6">
-
+    <div class="col">
+      <app-repos-list [repositories]="repositories"></app-repos-list>
     </div>
   </div>
 </div>

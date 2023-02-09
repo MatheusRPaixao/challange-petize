@@ -38,7 +38,7 @@ export interface GitRepos {
   name: string;
   full_name: string;
   private: boolean;
-  'owner': GitUser;
+  owner: GitUser;
   html_url: string;
   description: string;
   fork: boolean;

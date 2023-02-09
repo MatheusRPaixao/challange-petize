@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './components/search/search.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 import { ReposListComponent } from './components/repos-list/repos-list.component';
+import { ReposItemComponent } from './components/repos-list/repos-item/repos-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReposListComponent } from './components/repos-list/repos-list.component
     ProfileComponent,
     SearchComponent,
     ProfileCardComponent,
-    ReposListComponent
+    ReposListComponent,
+    ReposItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="input-group">
+        <span class="input-group-text">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </span>
+  <input type="text" class="form-control" [placeholder]="placeholder"
+         [formControl]="searchControl"
+         (keydown.enter)="onEnterEvent.emit()">
+  <div class="has-error" *ngIf="searchControl.hasError('notFound')">
+    Esse usuário não foi encontrado, certifique-se de que o nome esta correto.
+  </div>
+</div>

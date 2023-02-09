@@ -7,12 +7,14 @@ import { HomeComponent } from './views/home/home.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PerfilComponent
+    PerfilComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

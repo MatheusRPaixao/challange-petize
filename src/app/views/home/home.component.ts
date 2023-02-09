@@ -22,7 +22,7 @@ export class HomeComponent {
   }
 
   onSubmit(): void {
-    this.showError = false;
+    // this.searchControl.setErrors({ notFound: false });
 
     if (this.isLoading) {
       return;
@@ -33,8 +33,9 @@ export class HomeComponent {
       this.router.navigate([`/perfil/${this.searchControl.value}`]).then();
     }, error => {
       console.error(error);
-      this.showError = true;
-    }, () => {
+      this.searchControl.setErrors({ notFound: true });
+      console.log(this.searchControl.hasError('notFound'));
+    }).add(() => {
       this.isLoading = false;
     });
   }

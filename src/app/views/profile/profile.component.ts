@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {GitRepos, GitUser} from '../../interfaces/git-hub';
 import {GitHubService} from '../../services/git-hub.service';
 import {forkJoin} from 'rxjs';
@@ -16,12 +16,17 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private gitHubService: GitHubService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.username = params.username;
+
+      if (!this.username) {
+        this.router.navigate(['/home']).then();
+      }
 
       forkJoin([
         this.gitHubService.getGitUser(this.username),

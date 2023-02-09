@@ -22,8 +22,6 @@ export class HomeComponent {
   }
 
   onSubmit(): void {
-    // this.searchControl.setErrors({ notFound: false });
-
     if (this.isLoading) {
       return;
     }
@@ -34,7 +32,6 @@ export class HomeComponent {
     }, error => {
       console.error(error);
       this.searchControl.setErrors({ notFound: true });
-      console.log(this.searchControl.hasError('notFound'));
     }).add(() => {
       this.isLoading = false;
     });
